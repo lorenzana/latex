@@ -1,0 +1,100 @@
+%\documentstyle[preprint,aps]{revtex}
+\documentclass[prb,showpacs,twocolumn,aps,a4paper]{revtex4}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Clausius-Mosotti in 2D}
+\author{ }
+\address{}
+\date{\today}
+
+
+\begin{abstract}
+\noindent
+
+\end{abstract}
+\pacs{71.10.-w, 71.10.Fd, 71.27.+a, 78.20.Bh}
+\maketitle
+
+%\narrowtext
+
+\section{}
+
+We want to compute the dielectric constant of a system of polarizable
+``molecules'' in 2D. For permanent dipoles at finite temperature we can assume a
+Curie law for the polarizability $\alpha \sim/(k_B T)$. 
+
+The particles are assuming to be distributed randomly in space but the
+same result is valid for a square lattice. We apply a uniform field in
+the y direction. Then all the particles acquire a dipole moment  
+$p=\alpha E_{loc}$. The local field, $E_{loc}=E+E_d$, acting on one
+molecule includes a contribution
+from the external field $E$ and the dipole dipole interactions $E_d$
+with all the other molecules. 
+
+Now we compute $E_d$. 
+The dipole field on a particle at the origin is given by: 
+$$
+E_d=\sum_{x,y} e_d(x,y) 
+$$
+with the field at the origin due to the dipole at position $(x,y)$
+given by:
+$$
+e_d(x,y)= - p\left(\frac{1}{R^2}-2  \frac{ y^2}{R^4}\right)
+$$
+which can be obtain from Goetz expression for the energy of two
+dipoles in 2D specialized in the present case and making the
+derivative respect to one of the dipoles. 
+
+Now the crucial point is that $E_d$ can be separated into two
+contributions one from the dipoles inside a large circle and the other
+from the dipoles outside. The contribution from inside the circle
+cancels.  Indeed consider the contribution from the dipole at $(x,y)$
+and the dipole at $(y,x)$ (in 3D one considers the cyclic permutations
+of $(x,y,z)$):
+
+$$e_d(x,y)+e_d(y,x)=- p\left(2 \frac{1}{R^2}-2  \frac{ y^2+x^2}{R^4}\right)=0 $$
+
+Taking the radius of the circle $r$ very large we can compute the
+contribution from the dipoles outside the circle using macroscopic
+arguments.  The macroscopic polarization is $P=pn$ with $n$ the
+density of molecules. The deferential of charge  on the border of the
+circle at position $r (sin\theta, \cos\theta )$ (here $\theta$ is the
+angle with the $y$-axis) is: 
+$$
+dq=- P \cos\theta r d\theta
+$$
+The electric field on the $y$ direction due to this charge is 
+$$
+dE=-\frac{dq \cos\theta}r
+$$
+and the total field in $y$ is 
+$$
+E_d=\int_0^{2\pi} d\theta P\cos^2\theta=\pi P
+$$
+The local field is $E_{loc}=E+\pi P$. Then $P=np=n\alpha (E+\pi P)$
+and $P=\chi E$
+with 
+$$\chi=\frac {n\alpha }{1-\pi n \alpha},$$
+which is the 2D generalization of Clausius-Mosotti.
+We see that when $n \alpha(k_B T)>1/\pi$ the system becomes unstable and
+becomes a ferroelectric therefore the ground state is ferroelectric,
+actually a nematic since there is orientational order but not
+positional order.  
+
+Notice that the computation is very delicate. A cutoff in the
+dipole-dipole interaction can spoil the result since will cancel
+$E_d$. 
+
+\bibliographystyle{prsty}
+\bibliography{lorenzana}
+
+\end{document}
+
+
+
+
+
+
